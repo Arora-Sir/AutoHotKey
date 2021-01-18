@@ -14,7 +14,7 @@ if WinActive("ahk_exe Zoom.exe")
     }
 else
     {
-    send !{F4}
+     send !{F4}
     }
 return
 

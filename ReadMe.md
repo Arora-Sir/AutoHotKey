@@ -1,3 +1,6 @@
+Install AutoHotKey
+Either Run the .exe file or can edit the code from .ahk file
+
 Zoom_Extension_HideFile_Hotkey
 
 ALt + Ctr + H : Hide Files
