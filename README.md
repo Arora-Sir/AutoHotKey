@@ -1,6 +1,8 @@
 Zoom_Extension_HideFile_Hotkey
 
 
+
+
 ALt + Ctr + H : Hide Files
 
 Alt + Ctr + H : Show Files
