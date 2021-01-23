@@ -6,7 +6,7 @@ $!^F4:: CLoseZoomIfInMeeting()
 $!^E:: f_ToggleFileExt()
 $!^H:: HideFiles()
 
-
+;$!^B:: closeCiscoWebex()
 
 ;text box created see in f_ToggleFileExt
 text(a,t:="",x:="",y:="") {
@@ -22,9 +22,19 @@ text(a,t:="",x:="",y:="") {
 	WinClose, Yipiee...
 }}
 
+;closeCiscoWebex(){
+	;Process, Close, %Capturer%
+
+;}
 
 CLoseZoomIfNotInMeeting()
 {
+	if WinActive("ahk_exe CiscoCollabHost.exe")
+		{
+			Run cmd.exe /c taskkill /F /IM CiscoCollabHost.exe
+			Run cmd.exe /c taskkill /F /IM Ciscowebexstart.exe
+		}
+
 	if WinActive("ahk_exe Zoom.exe")
 		{
 		if WinExist("Zoom Meeting")
@@ -40,6 +50,9 @@ CLoseZoomIfNotInMeeting()
 		{
 		send !{F4}
 		}
+
+
+
 	return
 }
 
